@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Counter</title>
+    <style>
+        body { text-align: center; margin-top: 50px; }
+        h1 { font-size: 50px; }
+        button { font-size: 20px; padding: 10px 20px; margin: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Interactive Counter</h2>
+    <h1 id="counter-display">0</h1>
+    
+    <button onclick="increase()">Increase (+)</button>
+    <button onclick="decrease()">Decrease (-)</button>
+    <button onclick="reset()">Reset (0)</button>
+
+    <script>
+        var count = 0; 
+
+        function increase() {
+            count = count + 1;
+            document.getElementById("counter-display").innerHTML = count;
+        }
+
+        function decrease() {
+            count = count - 1;
+            document.getElementById("counter-display").innerHTML = count;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById("counter-display").innerHTML = count;
+        }
+    </script>
+
+</body>
+</html>
