@@ -3,38 +3,41 @@
 <head>
     <title>Interactive Counter</title>
     <style>
-        body { text-align: center; margin-top: 50px; }
+        body { text-align: center; margin-top: 50px; font-family: Arial, sans-serif; }
         h1 { font-size: 50px; }
         button { font-size: 20px; padding: 10px 20px; margin: 10px; cursor: pointer; }
     </style>
 </head>
 <body>
-
+ 
     <h2>Interactive Counter</h2>
     <h1 id="counter-display">0</h1>
-    
-    <button onclick="increase()">Increase (+)</button>
-    <button onclick="decrease()">Decrease (-)</button>
-    <button onclick="reset()">Reset (0)</button>
-
+ 
+    <button id="increase-btn">Increase (+)</button>
+    <button id="decrease-btn">Decrease (-)</button>
+    <button id="reset-btn">Reset (0)</button>
+ 
     <script>
-        var count = 0; 
-
+        var count = 0;
+ 
         function increase() {
             count = count + 1;
             document.getElementById("counter-display").innerHTML = count;
         }
-
+ 
         function decrease() {
             count = count - 1;
             document.getElementById("counter-display").innerHTML = count;
         }
-
+ 
         function reset() {
             count = 0;
             document.getElementById("counter-display").innerHTML = count;
         }
+        document.getElementById("increase-btn").onclick = increase;
+        document.getElementById("decrease-btn").onclick = decrease;
+        document.getElementById("reset-btn").onclick = reset;
     </script>
-
+ 
 </body>
 </html>

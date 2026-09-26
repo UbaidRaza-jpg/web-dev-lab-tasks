@@ -11,38 +11,40 @@
     </style>
 </head>
 <body>
-
+ 
     <h2>Student Profile</h2>
-    
+ 
     <div class="input-group">
         <label>Student Name:</label><br>
         <input type="text" id="name-input">
     </div>
-    
+ 
     <div class="input-group">
         <label>Department:</label><br>
         <input type="text" id="dept-input">
     </div>
-    
-    <button onclick="generateProfile()">Generate Profile</button>
-    
+ 
+    <button id="generate-btn">Generate Profile</button>
+ 
     <div id="profile-card">
         <h3>Student Information</h3>
         <p><b>Name:</b> <span id="display-name"></span></p>
         <p><b>Department:</b> <span id="display-dept"></span></p>
     </div>
-
+ 
     <script>
         function generateProfile() {
             var studentName = document.getElementById("name-input").value;
             var department = document.getElementById("dept-input").value;
-            
+ 
             document.getElementById("display-name").innerHTML = studentName;
             document.getElementById("display-dept").innerHTML = department;
-            
+ 
             document.getElementById("profile-card").style.display = "block";
         }
+ 
+        document.getElementById("generate-btn").onclick = generateProfile;
     </script>
-
+ 
 </body>
 </html>
